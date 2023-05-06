@@ -52,3 +52,4 @@ dooraccess/src/main/libs/armeabi-v7a/libDoorAccess.so
 dooraccess/src/main/libs/arm64-v8a/libDoorAccess.so
 ae/src/main/libs/
 ae/src/main/obj/
+/.idea/kotlinc.xml
