@@ -2,7 +2,7 @@
 Keep up to date with Android development.
 
 ## Explore the Jetpack libraries by type
-Search Jetpack libraries in [Jetpack homeoage](https://developer.android.google.cn/jetpack/androidx/explorer).
+Search Jetpack libraries in [Jetpack homepage](https://developer.android.google.cn/jetpack/androidx/explorer).
 > English language pages should show newer library version than the Chinese.
 
 ## Explore dependencies by code completion
@@ -16,3 +16,13 @@ Each version of Android Studio requires specific versions of AGP, pay especially
 ## AGP and the Minimum required Gradle version
 Find the minimum supported version from [Update gradle](https://developer.android.google.cn/build/releases/gradle-plugin#updating-gradle) section and the version from [Gradle website](https://gradle.org/releases/).
 > AGP 8.0 requires the Gradle version not older than Gradle 8.0.
+
+## Understanding build.gradle
+A Project is an ExtensionAware Object that has an ExtensionContainer field implemented as ```Map<String, Object>```.
+
+```android``` block in build.gradle file represents an extension of type ```BaseAppModuleExtension``` created and added to the project in ```AppPlugin```.
+
+```BaseAppModuleExtension``` has fields like ```defaultConfig```, ```buildTypes``` etc.,```buildFeatures``` and ```namespace``` are indirectly implemented by extensions when they implement the new public extension interfaces via delegates.
+> To view AGP source code, add the following dependencies to the app module build.gradle:  
+> implementation gradleApi()  
+> implementation 'com.android.tools.build:gradle:8.0.1'

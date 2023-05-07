@@ -1,3 +1,4 @@
+// PluginManagementSpec: Configures how plugins are resolved. @since 3.5
 pluginManagement {
     repositories {
         maven("https://maven.aliyun.com/repository/public/")
@@ -8,6 +9,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+// DependencyResolutionManagement: Allows configuring dependency resolution for all projects of the build. @since 6.8
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {

@@ -33,8 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // https://developer.android.google.cn/reference/tools/gradle-api/8.0/com/android/build/api/dsl/BuildFeatures?hl=en#buildConfig()
     buildFeatures {
         compose true
+        buildConfig true // default to false now
     }
     composeOptions {
         kotlinCompilerExtensionVersion '1.4.7'
@@ -47,6 +49,8 @@ android {
 }
 
 dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:8.0.1'
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-process:2.6.1'
