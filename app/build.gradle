@@ -49,8 +49,8 @@ android {
 }
 
 dependencies {
-    implementation gradleApi()
-    implementation 'com.android.tools.build:gradle:8.0.1'
+    compileOnly gradleApi()
+    compileOnly 'com.android.tools.build:gradle:8.0.1'
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-process:2.6.1'

@@ -24,5 +24,5 @@ A Project is an ExtensionAware Object that has an ExtensionContainer field imple
 
 ```BaseAppModuleExtension``` has fields like ```defaultConfig```, ```buildTypes``` etc.,```buildFeatures``` and ```namespace``` are indirectly implemented by extensions when they implement the new public extension interfaces via delegates.
 > To view AGP source code, add the following dependencies to the app module build.gradle:  
-> implementation gradleApi()  
-> implementation 'com.android.tools.build:gradle:8.0.1'
+> compileOnly gradleApi()  
+> compileOnly 'com.android.tools.build:gradle:8.0.1'
