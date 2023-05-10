@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 // PluginManagementSpec: Configures how plugins are resolved. @since 3.5
 pluginManagement {
     repositories {

@@ -26,3 +26,15 @@ A Project is an ExtensionAware Object that has an ExtensionContainer field imple
 > To view AGP source code, add the following dependencies to the app module build.gradle:  
 > compileOnly gradleApi()  
 > compileOnly 'com.android.tools.build:gradle:8.0.1'
+
+## Groovy to Kotlin DSL Migration
+Follow these steps, view [Migrating build logic from Groovy to Kotlin](https://docs.gradle.org/current/userguide/migrating_from_groovy_to_kotlin_dsl.html) for detail documentation.  
+1. Searching for ' and replacing by "  
+2. Disambiguating function invocations and property assignments  
+3. Naming script file build.gradle.kts  
+4. Configuring plugins, tasks and dependencies  
+5. Creating tasks or custom configurations
+
+Best practices:  
+- Applying plugins in the [```plugins {}```](https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block) block  
+- Putting local build logic in the build’s [buildSrc](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources) directory
