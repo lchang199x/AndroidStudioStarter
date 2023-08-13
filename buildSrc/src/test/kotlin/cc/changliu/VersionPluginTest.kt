@@ -1,4 +1,4 @@
-package com.tptz
+package cc.changliu
 
 class VersionPluginTest {
 

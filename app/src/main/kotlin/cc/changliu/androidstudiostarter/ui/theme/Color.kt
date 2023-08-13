@@ -1,4 +1,4 @@
-package com.tptz.flamingosample.ui.theme
+package cc.changliu.androidstudiostarter.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

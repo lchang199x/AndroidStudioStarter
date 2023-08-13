@@ -1,4 +1,6 @@
-package com.tptz.flamingosample.ui.theme
+@file:Suppress("PrivatePropertyName")
+
+package cc.changliu.androidstudiostarter.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -38,7 +40,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun FlamingoSampleTheme(
+fun AndroidStudioStarterTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

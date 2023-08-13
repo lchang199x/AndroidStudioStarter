@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tptz.flamingosample"
+    namespace = "cc.changliu.androidstudiostarter"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.tptz.flamingosample"
+        applicationId = "cc.changliu.androidstudiostarter"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

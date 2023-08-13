@@ -21,5 +21,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "FlamingoSample"
+rootProject.name = "AndroidStudioStarter"
 include(":app")
