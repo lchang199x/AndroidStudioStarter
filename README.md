@@ -1,5 +1,5 @@
-# FlamingoSample
-Keep up to date with Android development.
+# AndroidStudioStarter
+Keep dev tools up to date with each Android Studio version.
 
 ## Explore the Jetpack libraries by type
 Search Jetpack libraries in [Jetpack homepage](https://developer.android.google.cn/jetpack/androidx/explorer).
@@ -10,7 +10,7 @@ Type a library name in module dependencies block, libraries with the latest vers
 > New version dependencies generally require new kotlin version, find latest kotlin version from [Kotlin website](https://kotlinlang.org/docs/home.html).
 
 ## Android Studio and AGP compatibility
-Each version of Android Studio requires specific versions of AGP, pay especially attention to the maximun supported version from [AGP releases](https://developer.android.google.cn/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility).
+Each version of Android Studio requires specific versions of AGP, pay especially attention to the maximum supported version from [AGP releases](https://developer.android.google.cn/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility).
 > AGP version supported by Flamingo is 3.2-8.0. Patch releases like 8.0.x are also included.
 
 ## AGP and the Minimum required Gradle version
