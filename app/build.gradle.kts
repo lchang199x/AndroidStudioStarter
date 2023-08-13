@@ -52,7 +52,7 @@ android {
 
 dependencies {
     compileOnly(gradleApi())
-    compileOnly("com.android.tools.build:gradle:8.0.1")
+    compileOnly("com.android.tools.build:gradle:$agp")
     implementation("androidx.core:core-ktx:1.10.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-process:2.6.1")
