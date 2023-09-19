@@ -9,13 +9,16 @@ Search Jetpack libraries in [Jetpack homepage](https://developer.android.google.
 Type a library name in module dependencies block, libraries with the latest version will be suggested.
 > New version dependencies generally require new kotlin version, find latest kotlin version from [Kotlin website](https://kotlinlang.org/docs/home.html).
 
-## Android Studio and AGP compatibility
-Each version of Android Studio requires specific versions of AGP, pay especially attention to the maximum supported version from [AGP releases](https://developer.android.google.cn/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility).
-> AGP version supported by Flamingo is 3.2-8.0. Patch releases like 8.0.x are also included.
+## Android Studio and Maximum supported AGP version
+Each version of Android Studio requires specific versions of AGP, pay especially attention to the maximum supported AGP version from [AGP releases](https://developer.android.google.cn/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility) and latest AGP version from [AGP in MvnRepository](https://mvnrepository.com/artifact/com.android.application/com.android.application.gradle.plugin).
+> AGP version supported by Giraffe is 3.2-8.1. Patch releases like 8.1.x are also included.
 
-## AGP and the Minimum required Gradle version
-Find the minimum supported version from [Update gradle](https://developer.android.google.cn/build/releases/gradle-plugin#updating-gradle) section and the version from [Gradle website](https://gradle.org/releases/).
-> AGP 8.0 requires the Gradle version not older than Gradle 8.0.
+## AGP and the Minimum required JDK/Gradle version
+Find the minimum required version from [Update gradle](https://developer.android.google.cn/build/releases/gradle-plugin#updating-gradle) section and the latest gradle version from [Gradle website](https://gradle.org/releases/).
+> AGP 8.1 requires JDK not older than 17, Gradle not older than 8.0.
+ 
+## Java & Kotlin Compatibility
+A comprehensive explanation on [Java versions in Android builds](https://developer.android.google.cn/build/jdks).
 
 ## Understanding build.gradle
 A Project is an ExtensionAware Object that has an ExtensionContainer field implemented as ```Map<String, Object>```.

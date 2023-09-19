@@ -1,3 +1,10 @@
+// By default, Gradle uses the same Java toolchain for running Gradle itself and building JVM projects.
+// Override Java toolchain(javac, java, javadoc etc.) to build and run both Kotlin and Java source code
+// This also acts as a default for sourceCompatibility, targetCompatibility and jvmTarget
+kotlin {
+    jvmToolchain(17)
+}
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,12 +12,12 @@ plugins {
 
 android {
     namespace = "cc.changliu.androidstudiostarter"
-    compileSdk = 33
+    compileSdk = 34 // https://developer.android.google.cn/build/jdks#compileSdk
 
     defaultConfig {
         applicationId = "cc.changliu.androidstudiostarter"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -23,25 +30,18 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            @Suppress("UnstableApiUsage")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+
     // https://developer.android.google.cn/reference/tools/gradle-api/8.0/com/android/build/api/dsl/BuildFeatures?hl=en#buildConfig()
-    @Suppress("UnstableApiUsage")
     buildFeatures {
         compose = true
         buildConfig = true // default to false now
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.8"
+        // https://developer.android.google.cn/jetpack/androidx/releases/compose-kotlin
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     packaging {
         resources {
@@ -53,10 +53,10 @@ android {
 dependencies {
     compileOnly(gradleApi())
     compileOnly("com.android.tools.build:gradle:$agp")
-    implementation("androidx.core:core-ktx:1.10.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-process:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-process:2.6.2")
+    implementation("androidx.activity:activity-compose:1.7.2")
     implementation(platform("androidx.compose:compose-bom:2023.05.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
