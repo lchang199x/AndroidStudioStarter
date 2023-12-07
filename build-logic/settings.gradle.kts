@@ -2,7 +2,6 @@
 
 // PluginManagementSpec: Configures how plugins are resolved. @since 3.5
 pluginManagement {
-    includeBuild("build-logic")
     repositories {
         maven("https://maven.aliyun.com/repository/public/")
         maven("https://maven.aliyun.com/repository/google")
@@ -21,6 +20,10 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
 }
-rootProject.name = "AndroidStudioStarter"
-include(":app")
+rootProject.name = "build-logic"
