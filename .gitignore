@@ -5,6 +5,8 @@ build/
 .gradle/
 */build/
 captures/
+# Kotlin 2.0
+.kotlin/
 
 # IDEA
 *.iml

@@ -6,8 +6,9 @@ kotlin {
 }
 
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -41,10 +42,11 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true // default to false now
+        aidl = true
     }
-    composeOptions {
-        // https://developer.android.google.cn/jetpack/androidx/releases/compose-kotlin
-        kotlinCompilerExtensionVersion = "1.5.8"
+    composeCompiler {
+        enableStrongSkippingMode = true
+        includeSourceInformation = true
     }
     packaging {
         resources {
