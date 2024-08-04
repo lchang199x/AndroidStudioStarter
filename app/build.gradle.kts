@@ -13,12 +13,12 @@ plugins {
 
 android {
     namespace = "cc.changliu.androidstudiostarter"
-    compileSdk = 34 // https://developer.android.google.cn/build/jdks#compileSdk
+    compileSdk = 35 // https://developer.android.google.cn/build/jdks#compileSdk
 
     defaultConfig {
         applicationId = "cc.changliu.androidstudiostarter"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
